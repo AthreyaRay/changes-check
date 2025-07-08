@@ -1,6 +1,6 @@
 steps:
 - label: "🔧 Test changed flag"
-  command: echo "if_Chnaged works sucessfully !!??"
+  command: echo "if_Chnaged works sucessfully !!!??"
   if_changed: "src/**"
 
 - label: "📄 Run regardless"
