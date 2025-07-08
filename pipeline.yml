@@ -1,7 +1,7 @@
 steps:
 - label: "🔧 Test changed flag"
   command: echo "if_Chnaged works sucessfully !!??"
-  if_changed: '*.md'
+  if_changed: src/**
 
 - label: "📄 Run regardless"
-  command: echo "This runs regardless"
+  command: echo "This runs regardlessss"
