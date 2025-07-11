@@ -2,6 +2,7 @@ steps:
 - label: "🔧 Test changed flag"
   command: echo "if_Chnaged works sucessfully !!!??, but why bro??"
   if_changed: src/**
+  timeout_in_minutes: 1
 
 - label: "📄 Run regardless"
   command: echo "This runs regardlessss"
