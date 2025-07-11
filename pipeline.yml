@@ -1,8 +1,8 @@
 steps:
 - label: "🔧 Test changed flag"
-  command: sleep 120
+  command: sleep 360
   if_changed: src/**
-  timeout_in_minutes: 1
+  timeout_in_minutes: 4
 
 - label: "📄 Run regardless"
   command: sleep 120
