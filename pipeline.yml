@@ -1,10 +1,8 @@
 steps:
 - label: "🔧 Test changed flag"
-  command: echo "if_Chnaged works sucessfully !!!??, but why bro??"
+  command: sleep 120
   if_changed: src/**
   timeout_in_minutes: 1
-  depends_on: 'dummy_key'
 
 - label: "📄 Run regardless"
   command: sleep 120
-  key: "dummy_key"
