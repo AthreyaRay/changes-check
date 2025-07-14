@@ -8,7 +8,7 @@ steps:
 
 - label: ":bash: Run Something Faily"
   command: |
-    echo "This will fail"
+    echo "$BUILDKITE_PLUGINS_PATH"
     exit 1
   plugins:
   - AthreyaRay/chatgpt-log#v1.0.0
