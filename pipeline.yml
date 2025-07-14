@@ -1,14 +1,14 @@
 steps:
 - label: "🔧 Test changed flaghh"
-  command: sleep 360
+  command: echo "sleep 360"
   if_changed: src/**.
 
 - label: "📄 Run regardless"
-  command: sleep 120
+  command: echo "hi"
 
 - label: ":bash: Run Something Faily"
   command: |
     echo "This will fail"
     exit 1
   plugins:
-  - AthreyaRay/chatgpt-log-buildkite-plugin
+  - AthreyaRay/chatgpt-log
