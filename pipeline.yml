@@ -11,4 +11,4 @@ steps:
     echo "$BUILDKITE_PLUGINS_PATH"
     exit 1
   plugins:
-  - AthreyaRay/chatgpt-log#v1.0.1
+  - AthreyaRay/chatgpt-log#v1.0.2
