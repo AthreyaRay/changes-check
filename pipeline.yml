@@ -1,10 +1,10 @@
 steps:
-- label: "🔧 Test changed flaghh"
-  command: echo "sleep 360"
-  if_changed: src/**.
+# - label: "🔧 Test changed flaghh"
+#   command: echo "sleep 360"
+#   if_changed: src/**.
 
-- label: "📄 Run regardless"
-  command: echo "hi"
+# - label: "📄 Run regardless"
+#   command: echo "hi"
 
 - label: ":bash: Run Something Faily"
   command: |
