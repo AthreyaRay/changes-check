@@ -11,4 +11,4 @@ steps:
     echo "This will fail"
     exit 1
   plugins:
-  - AthreyaRay/chatgpt-log
+  - AthreyaRay/chatgpt-log#v1.0.0
