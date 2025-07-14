@@ -12,4 +12,4 @@ steps:
     docker ps 
     echo 'above command would fail as I stopped my docker'
   plugins:
-  - AthreyaRay/chatgpt-log#v1.0.4
+  - AthreyaRay/chatgpt-logs
