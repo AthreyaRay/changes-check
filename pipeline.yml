@@ -9,6 +9,7 @@ steps:
 - label: ":bash: Run Something Faily"
   command: |
     echo "$BUILDKITE_PLUGINS_PATH"
-    exit 1
+    docker ps 
+    echo 'above command would fail as I stopped my docker'
   plugins:
   - AthreyaRay/chatgpt-log#v1.0.4
