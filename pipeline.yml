@@ -1,15 +1,21 @@
-steps:
+# steps:
 # - label: "🔧 Test changed flaghh"
 #   command: echo "sleep 360"
 #   if_changed: src/**.
 
-# - label: "📄 Run regardless"
-#   command: echo "hi"
+#
+steps:
+- label: "📄 Run regardless"
+  command: |
+    echo "hi"
+    buildkite-agent annotate "Your annotation text here" \
+      --style info \
+      --context job
 
-- label: ":bash: Run Something Faily"
+- label: ":bash: Run Something Faulty"
   command: |
     echo "$BUILDKITE_PLUGINS_PATH"
-    docker ps 
-    echo 'above command would fail as I stopped my docker'
+    docker ps
+    echo "above command would fail as I stopped my docker"
   plugins:
   - AthreyaRay/chatgpt-logs
