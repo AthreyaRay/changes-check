@@ -10,7 +10,7 @@ steps:
     echo "hi"
     buildkite-agent annotate "Your annotation text here" \
       --style info \
-      --context job
+      --job "$BUILDKITE_JOB_ID"
 
 - label: ":bash: Run Something Faulty"
   command: |
