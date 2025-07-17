@@ -8,7 +8,7 @@ steps:
 - label: "📄 Run regardless"
   command: |
     echo "hi"
-    buildkite-agent annotate "Your annotation text here" --job $BUILDKITE_JOB_ID
+    buildkite-agent annotate "Your annotation text here" --job Thisandthat
 
 - label: ":bash: Run Something Faulty"
   command: |
