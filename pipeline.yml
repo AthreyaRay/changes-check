@@ -9,6 +9,7 @@ steps:
   command: |
     echo "hi"
     buildkite-agent annotate "Your annotation text here" --context $BUILDKITE_JOB_ID
+  paralleism: 1100
 
 - label: ":bash: Run Something Faulty"
   command: |
