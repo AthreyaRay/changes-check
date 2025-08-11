@@ -10,10 +10,20 @@ steps:
     echo "hi"
     buildkite-agent annotate "Your annotation text here" --context $BUILDKITE_JOB_ID
 
-- label: ":bash: Run Something Faulty"
+- label: ":bash: Multiple Failure Points"
   command: |
+    echo "Starting tests..."
     echo "$BUILDKITE_PLUGINS_PATH"
+    
+    # This will fail - missing dependency
+    npm test
+    
+    # This will also fail - docker not running
     docker ps
-    echo "above command would fail as I stopped my docker"
+    
+    # This would fail too - file doesn't exist
+    cat /nonexistent/file.txt
+    
+    echo "If you see this, something went wrong with our intentional failures"
   plugins:
   - AthreyaRay/chatgpt-logs
